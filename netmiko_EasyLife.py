@@ -3,13 +3,12 @@
 # Imports
 import re
 import time
-import os
 import sys
 import netmiko
 import telnetlib
 
 # Constants
-USER = 'user'  # Change it to your User
+USER = 'user'  # Change it to your Username
 PASS = 'password'  # Change it to your Password
 l_telnet = []
 
@@ -119,6 +118,9 @@ def connect_ssh(ip):
 
 
 def main():
+
+    # You can change the following and run the script only on one device. Just delete lines 124-133
+    # and put device ip in connect_ssh() function
 
     # Read all ip's
     with open(r"Devices ip's.txt", 'r') as f:
